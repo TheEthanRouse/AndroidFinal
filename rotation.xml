@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: Holds the information for a rotation animation.
+*************************************
+-->
+<!--This rotate animation takes an object and spins it on its x&y axis 360 degrees at 3/4s a second
+5 times. -->
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:toDegrees="359"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:duration="750"
+    android:repeatCount="4">
+
+</rotate>
