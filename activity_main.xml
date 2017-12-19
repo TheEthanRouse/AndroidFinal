@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: Holds the layout information for the main activity. I set all of the
+* activities to a nested relative view for ease of use for me. The activity holds 3 edit texts,
+* two textviews and 2 buttons.
+*************************************
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="edu.wmich.lab5erouse9494.MainActivity">
+
+    <!--Used to easily line up widgets and have them be constrained by parent widgets if need be
+    matches the constraint view parent for scale.-->
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <!--Holds the information for the first textview on the screen welcoming the user to the
+        application the text color was changed to black as was all of the other text on the page
+        except maybe the buttons. The text was centered strengthened and is in size 18sp.-->
+        <TextView
+            android:id="@+id/textViewGreetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:fontFamily="casual"
+            android:text="@string/txtGreeting"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--This holds the edit text(user name) layout information its margin from the text greeting
+        is 20sp, the text is centered black and 14sp font.-->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewGreetings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="@string/hntName"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <!--This holds the edit text(user email) layout information its margin from the text greeting
+        is 17sp, the text is centered black and 14sp font.-->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextName"
+            android:layout_below="@+id/editTextName"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="@string/hntEmail"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!--This is layout information for the textview that tells the user to input how many
+        cookies they eat a week.-->
+        <TextView
+            android:id="@+id/textViewCookieTot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:fontFamily="casual"
+            android:text="@string/txtCookieTot"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <!--This holds the edit text(user cookie amount) layout information its margin from the text greeting
+        is 17sp, the text is centered black and 14sp font.-->
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextEmail"
+            android:layout_below="@+id/textViewCookieTot"
+            android:layout_marginTop="17dp"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="@string/hntAmount"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!--This holds the layout button for the first button on the screen to register a new CF
+        rank-->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/buttonPreviousRank"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:elevation="24dp"
+            android:text="@string/btnRegister" />
+
+        <!--Just under the first button this button holds the layout information for a previous rank
+        button to check prior scores.-->
+        <Button
+            android:id="@+id/buttonPreviousRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="24dp"
+            android:text="@string/btnPreviousRank" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
