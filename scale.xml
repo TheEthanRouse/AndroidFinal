@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: This is an interesting animation where an image is scaled to full size from
+* nothing while spinning in 4 circles.
+*************************************
+-->
+<!--The set holds a number of animations to perform all at once on an image.-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--This makes an image object start from 200 pixels under the the stating location and moves
+    the image up to its starting position in 5 seconds.
+    -->
+    <translate
+    android:fromXDelta="0.0"
+    android:toXDelta="0.0"
+    android:fromYDelta="200.0"
+    android:toYDelta="0.0"
+    android:duration="5000"/>
+
+    <!--The object will fade into view in 3 seconds.-->
+    <alpha
+    android:fromAlpha = "0.0"
+    android:toAlpha = "1.0"
+    android:duration = "3000"/>
+</set>
