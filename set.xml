@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: This animation takes an image and scales it to 200dp x200dp over 3 seconds
+* while changing from transparent to opaque in 5 seconds.
+*************************************
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Takes an image from 100% transparency to 100% opaque in 5 seconds.-->
+    <alpha
+    android:fromAlpha="0.0"
+    android:toAlpha="1.0"
+    android:duration = "5000"/>
+
+
+    <!--Takes an image from 0x0 dps to 200x200dp in 3 seconds.-->
+    <scale
+    android:fromXScale="0"
+    android:toXScale="200dp"
+    android:fromYScale="0"
+    android:toYScale="200dp"
+    android:duration = "3000"/>
+
+</set>
