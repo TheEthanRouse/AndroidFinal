@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: Holds the layout information for the splash activity. This activity holds an
+ image the image is set to a tween during start up and a text view.
+*************************************
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <!--Fills the constraint view to make constraining to a single location(unless an animation says
+     otherwise) imageviews and textviews less work.-->
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="551dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <!--Holds the layout information for the smore image which is introduced as an animation.-->
+        <ImageView
+            android:id="@+id/imageViewSmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:contentDescription="@string/imgSmore"
+            app:srcCompat="@drawable/smore"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="77dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!--Holds the layout information for the loading textview the user sees during the splash
+        activity.-->
+        <TextView
+            android:id="@+id/textViewDessertStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewSmore"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="103dp"
+            android:fontFamily="casual"
+            android:text="@string/txtDessertStart"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
