@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: This holds the frame animation list.
+*************************************
+-->
+<!--Used to holds drawables to be used in a frame activity. I turned the one shot off, so this will
+ run forever unless you turn off the application.-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+
+    <!--Holds a smore drawable for half a second before going to the next image.-->
+    <item android:drawable="@drawable/smore" android:duration="500"/>
+
+    <!--Holds a frosted cookie drawable for half a second before going to the next image.-->
+    <item android:drawable="@drawable/frosted" android:duration="500"/>
+
+    <!--Holds a chocolate chip cookie drawable for half a second before going to the next image.-->
+    <item android:drawable="@mipmap/ic_launcher" android:duration="500"/>
+
+    <!--Holds an Oreo drawable for half a second before going to the next image.-->
+    <item android:drawable="@drawable/oreo" android:duration="500"/>
+
+    <!--Holds an m&m cookie drawable for half a second before going to the next image.-->
+    <item android:drawable="@drawable/mm" android:duration="500"/>
+
+    <!--Holds some sort of pink frosted oreo esk cookie for half a second before starting the loop
+    again.-->
+    <item android:drawable="@drawable/pink" android:duration="500"/>
+
+
+</animation-list>
