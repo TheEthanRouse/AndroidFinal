@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+*************************************
+* Programmer: Ethan Rouse
+* Class ID: erouse9494
+* Lab4: Framed Tweens, a classic scapegoat scenario
+* CIS 2610: Business Mobile Programming
+* Spring 2017
+* Due date: 04/21/17
+* Date completed: 04/21/17
+*************************************
+* Program Explanation: Provides information on the Cookie Fiend Deal Generator to the android
+* system. This is where many components of the application are held including the activities
+* (Splash, Main, Results).
+*************************************
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wmich.lab5erouse9494">
+
+    <!--Links all of the base information throughout the activities within this application such as
+    if backups are allowed, where the icon is located, the name of the application, and the
+    applications theme. -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--The launcher activity is the splash activity I also made it so even thought the main
+        theme of the application is AppCompat.light.DarkActionBar the splash activity has no action bar,
+        but has the same theme otherwise.-->
+        <activity android:name=".SplashActivity"
+            android:theme ="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <!--There is an intent from the launcher activity to the main activity.-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--Declares an activity Main where the body of the application is held.-->
+        <activity android:name=".MainActivity" />
+
+        <!--Declares a results activity.-->
+        <activity android:name=".ResultsActivity">
+        </activity>
+    </application>
+
+</manifest>
